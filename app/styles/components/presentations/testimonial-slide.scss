@@ -1,0 +1,49 @@
+.TestimonialSlide {
+  &-quoteSymbol {
+    position: absolute;
+    color: #b2ebf2;
+    font-size: 400px !important;
+    font-family: 'Roboto' !important;
+    opacity: .5;
+
+    &--open {
+
+    }
+
+    &--close {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &-quoteContainer {
+    margin: 0 auto !important;
+    max-width: 70% !important;
+  }
+
+  &-quote {
+    color: white !important;
+    font-size: 3.6rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  &-attributionContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-attributionImage {
+    margin: 0 !important;
+    max-width: 200px !important;
+    border-width: 2px !important;
+  }
+
+  &-attributionNameContainer {
+    padding-left: 1rem !important;
+  }
+
+  &-attributionDescription {
+    font-style: italic !important;
+    font-size: 1.6rem !important;
+  }
+}

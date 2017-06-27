@@ -1,0 +1,44 @@
+.SlideBody {
+  width: 100% !important;
+
+  &--display {
+    &Flex {
+      display: flex !important;
+    }
+
+    &Block {
+    }
+  }
+
+  &--align {
+    &Left {
+      text-align: left !important;
+    }
+    &Center {
+      text-align: center !important;
+    }
+  }
+
+  &--alignItems {
+    &Flex-end {
+      align-items: baseline;
+    }
+  }
+
+  &--columns1 {
+    flex-wrap: wrap;
+
+    .SlideColumn {
+      flex-basis: 100%;
+    }
+  }
+
+  @for $i from 2 through 12 {
+    &--columns#{$i} {
+      .SlideColumn {
+        flex-basis: percentage(1/$i);
+        max-width: percentage(1/$i);
+      }
+    }
+  }
+}

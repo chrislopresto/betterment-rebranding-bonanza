@@ -1,0 +1,277 @@
+/**
+ * Material - Cyan Amber (matca) theme for reveal.js.
+ * https://www.materialpalette.com/cyan/amber
+ */
+
+$MatcaColorPalette-colors: (
+  'primary': (
+    'base': #00bcd4,
+    'light': #b2ebf2,
+    'dark': #2179ee // h1 color
+  ),
+  'accent': (
+    'base': #ffc107
+  ),
+  'secondary': (
+    'base': #727272,
+    'light': #b6b6b6,
+  ),
+  'foreground': (
+    'base': #212121
+  ),
+  'background': (
+    'base': #ffffff,
+    'dark': #f3f4f8, // background color
+  )
+);
+
+$MatcaColorPalette-baseKey: 'base' !default;
+$MatcaColorPalette-opacities: (
+  'light': 0.8,
+  'dark': 0.4,
+  'darker': 0.3
+);
+
+@function matca-palette-color(
+  $name: 'primary',
+  $variant: $MatcaColorPalette-baseKey,
+  $opacity: 1
+) {
+  $color: null;
+
+  $colorVariants: map-get($MatcaColorPalette-colors, $name);
+
+  @if $colorVariants {
+    $color: map-get($colorVariants, $variant);
+  }
+
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($MatcaColorPalette-opacities, $opacity));
+
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}
+
+// https://gist.github.com/pascalduez/10011785
+// Capitalize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function capitalize($string) {
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// Alias
+@function str-ucfirst($string) {
+  @return capitalize($string);
+}
+
+
+
+// Uncapitalize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function uncapitalize($string) {
+  @return to-lower-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// Alias
+@function str-lcfirst($string) {
+  @return uncapitalize($string);
+}
+
+
+
+// Capitalize each word in string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function str-ucwords($string) {
+  $progress: $string;
+  $result: "";
+
+  $running: true;
+
+  @while $running {
+    $index: str-index($progress, " ");
+    @if $index {
+      $result: $result + capitalize(str-slice($progress, 1, $index));
+      $progress: str-slice($progress, ($index + 1));
+    }
+    @else {
+      $running: false;
+    }
+  }
+
+  @return capitalize($result) + capitalize($progress);
+}
+
+
+
+// Return whether `$value` is contained in `$list`
+// --------------------------------------------------------------------------------
+// @param [list] $list
+// @param [$value] $value
+// --------------------------------------------------------------------------------
+// @return [boolean]
+
+@function contain($list, $value) {
+  @return not not index($list, $value);
+}
+
+
+
+// Camelize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function camelize($string) {
+  $progress: $string;
+  $result: "";
+  $exclude: " ", "-", "–", "—", "_", ",", ";", ":", ".";
+
+  @while str-length($progress) > 0  {
+    $char: str-slice($progress, 1, 1);
+
+    @if contain($exclude, $char) {
+      $progress: capitalize(str-slice($progress, 2, 2)) + str-slice($progress, 3);
+    }
+    @else {
+      $result: $result + $char;
+      $progress: str-slice($progress, 2);
+    }
+ }
+
+  @return $result;
+}
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,300italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900,700,600,500,300,200);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100,400italic);
+
+// Override theme settings (see ../template/settings.scss)
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: matca-palette-color('background', 'dark');
+
+// Primary/body text
+$mainFont: 'Raleway', sans-serif;
+$mainFontSize: 30px;
+$mainColor: matca-palette-color('foreground', 'base');
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Raleway', sans-serif;
+$headingColor: matca-palette-color('secondary');
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+$headingFontWeight: normal;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 2.8em;
+$heading2Size: 2.11em;
+$heading3Size: 1.4em;
+$heading4Size: 1.00em;
+
+// Links and actions
+$linkColor: matca-palette-color('primary', 'dark');
+$linkColorHover: matca-palette-color('primary');
+
+// Text selection
+$selectionBackgroundColor: matca-palette-color('accent');
+$selectionColor: matca-palette-color('primary', 'light');
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: matca-palette-color('background', 'dark');
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.matca.reveal {
+  h1 {
+    color: matca-palette-color('primary', 'dark');
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: 300;
+    text-transform: none;
+  }
+
+  small {
+    font-weight: 300;
+  }
+
+  pre {
+   margin: 0;
+   width: 100%;
+  }
+
+  code {
+    font-family: 'Source Code Pro';
+  }
+
+  .pause-overlay {
+    background: matca-palette-color('foreground');
+  }
+
+  .frivolous {
+    font-family: 'Fredericka the Great';
+    text-transform: lowercase;
+  }
+
+  .r {
+    padding-top: 20px;
+    text-align: right;
+    padding-right: 25%;
+  }
+
+  .CodeHeader {
+    text-align: left;
+    width: 90%;
+    margin: 40px auto -15px;
+  }
+
+  .Code {
+    &-header {
+      text-align: left;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &-block {
+      box-shadow: none;
+    }
+  }
+
+}

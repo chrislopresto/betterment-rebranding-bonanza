@@ -1,5 +1,26 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#reveal-presentation
+    presentationWidth=1600
+    presentationHeight=900
+    presentation-class='lsgdd-Presentation'
+    theme='matca'
+    backgroundTransition='fade'
+    transition='none'
+    center=false
+}}
 
-{{outlet}}
+{{#reveal-slide centeredVertically=true}}
+  {{#presentations/slide-body align="center" display="block"}}
+    <h1>Swapping Your Rails Front End</h1>
+    <h3>A Betterment Rebranding Bonanza</h3>
+    <p class="fragment">
+      <small><a href="http://chrislopresto.com">Chris LoPresto</a> / <a href="http://twitter.com/chrislopresto">@chrislopresto</a></small>
+    </p>
+  {{/presentations/slide-body}}
+  {{#reveal-slide-notes}}
+- Hello
+- Thanks
+- Happy
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}
+
+{{/reveal-presentation}}

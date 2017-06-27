@@ -1,0 +1,7 @@
+<div class="stretch RevealSlide-content {{if centeredVertically 'RevealSlide-content--centeredVertically'}}">
+  {{#presentations/slide-body display="block"}}
+    <div class="BenefitSlide-lede">{{lede}}</div>
+    <div class="BenefitSlide-detail {{if detailFragment 'fragment'}}">{{yield}}</div>
+    <div class="BenefitSlide-qualifier">{{qualifier}}</div>
+  {{/presentations/slide-body}}
+</div>

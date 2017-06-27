@@ -1,0 +1,9 @@
+.SlideFooter {
+  position: absolute !important;
+  bottom: 0;
+  display: flex !important;
+  width: 100% !important;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}

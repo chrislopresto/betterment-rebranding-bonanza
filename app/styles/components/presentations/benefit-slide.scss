@@ -1,0 +1,41 @@
+.BenefitSlide {
+  &-lede {
+    color: white !important;
+    padding: 8rem 0 2rem !important;
+    font-weight: bold !important;
+    font-size: 6rem !important;
+  }
+
+  &-detail {
+    color: white;
+    font-size: 2.4rem !important;
+    border: solid 2px #b6b6b6 !important;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 4rem !important;
+    margin-left: 4rem !important;
+    padding: 4rem !important;
+    display: inline-block;
+  }
+
+  &-detailList {
+    list-style: none !important;
+    margin-left: 0 !important;
+  }
+
+  &-detailListItem {
+    padding-bottom: 2rem !important;
+
+    &:last-child {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  &-qualifier {
+    color: #ffc107;
+    font-size: 3rem !important;
+    position: absolute;
+    bottom: 2rem;
+  }
+
+}

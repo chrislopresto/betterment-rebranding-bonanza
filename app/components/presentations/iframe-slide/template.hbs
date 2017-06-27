@@ -1,0 +1,9 @@
+{{yield}}
+<span class="IframeSlide-currentIndexh">{{emberRevealJs.indexh}}</span>
+{{#reveal-wormhole to="the-outside-world" renderInPlace=renderInPlace}}
+  <div class="stretch RevealSlide-content {{if centeredVertically 'RevealSlide-content--centeredVertically'}}">
+    {{#presentations/slide-body align="left" display="block"}}
+      <iframe class="IframeSlide-iframe" src={{src}} frameborder="0"></iframe>
+    {{/presentations/slide-body}}
+  </div>
+{{/reveal-wormhole}}

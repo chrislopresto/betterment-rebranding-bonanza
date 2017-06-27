@@ -1,0 +1,9 @@
+<div class="stretch RevealSlide-content {{if centeredVertically 'RevealSlide-content--centeredVertically'}}">
+  {{#presentations/slide-body display="block"}}
+    <div class="TermSlide-term">{{term}}</div>
+    {{#if qualifier}}
+      <div class="TermSlide-qualifier">{{qualifier}}</div>
+    {{/if}}
+    <div class="TermSlide-definition">{{definition}}</div>
+  {{/presentations/slide-body}}
+</div>

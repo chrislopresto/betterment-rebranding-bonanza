@@ -1,0 +1,19 @@
+.TermSlide {
+  &-term {
+    color: #00bcd4 !important;
+    padding: 8rem 0 2rem !important;
+    font-weight: bold !important;
+    font-size: 6rem !important;
+  }
+
+  &-qualifier {
+    color: #b6b6b6;
+    font-size: 2.5rem !important;
+  }
+
+  &-definition {
+    color: white;
+    font-size: 4rem !important;
+    max-width: 80% !important;
+  }
+}

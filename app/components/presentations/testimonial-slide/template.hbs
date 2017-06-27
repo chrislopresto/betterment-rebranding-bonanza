@@ -1,0 +1,18 @@
+<div class="TestimonialSlide-quoteSymbol TestimonialSlide-quoteSymbol--open">&ldquo;</div>
+<div class="TestimonialSlide-quoteSymbol TestimonialSlide-quoteSymbol--close">&bdquo;</div>
+<div class="stretch RevealSlide-content {{if centeredVertically 'RevealSlide-content--centeredVertically'}}">
+  {{#presentations/slide-body display="block"}}
+    <div class="TestimonialSlide-quoteContainer">
+      <div class="TestimonialSlide-quote">{{yield}}</div>
+      <div class="TestimonialSlide-attributionContainer">
+        <div class="TestimonialSlide-attributionImageContainer">
+          <img src={{image}} alt={{imageAlt}} class="TestimonialSlide-attributionImage u-rounded u-grayscale" />
+        </div>
+        <div class="TestimonialSlide-attributionNameContainer">
+          <div class="TestimonialSlide-attributionName">{{name}}</div>
+          <div class="TestimonialSlide-attributionDescription">{{description}}</div>
+        </div>
+      </div>
+    </div>
+  {{/presentations/slide-body}}
+</div>

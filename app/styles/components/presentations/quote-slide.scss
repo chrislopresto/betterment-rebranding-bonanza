@@ -1,0 +1,16 @@
+.QuoteSlide {
+  &-quote {
+    color: white !important;
+    text-align: left;
+  }
+
+  &-attribution {
+    color: white;
+    font-weight: 300 !important;
+    font-style: italic !important;
+
+    text-align: left;
+    min-height: 1.5em;
+    padding-bottom: 15% !important;
+  }
+}
