@@ -1,0 +1,16 @@
+// Theme => Components
+.SlideHeader {
+  &-super {
+    color: matca-palette-color('secondary', 'light') !important;
+  }
+  &-main {
+    color: matca-palette-color('primary', 'dark') !important;
+  }
+  &-sub {
+    color: matca-palette-color('secondary') !important;
+  }
+}
+.SlideListItem--sub {
+  color: matca-palette-color('secondary') !important;
+}
+$bulletTextUnderlineColor: matca-palette-color('secondary', 'base', .4);

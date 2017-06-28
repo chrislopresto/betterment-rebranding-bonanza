@@ -9,5 +9,6 @@ export default RevealSlide.extend({
 
   backgroundColor: "#212121",
   backgroundTransition: "fade",
-  detailFragment: true
+  detailFragment: true,
+  hasDetail: true
 });

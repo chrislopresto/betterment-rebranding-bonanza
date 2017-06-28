@@ -3,14 +3,71 @@
  * https://www.materialpalette.com/cyan/amber
  */
 
+ $sc-colors: (
+     'blue': #2179ee,
+     'green': #00cc9a,
+     'coral': #ff6759,
+     'gold': #f0c373,
+     'purple': #7537ef,
+     'white': #ffffff,
+     'black': #000000,
+     'grey': #c2c6cc,
+
+     // TODO: Deprecate direct access to grey secondary colors
+     'grey-10' : #f3f4f8,
+     'grey-20' : #e1e5eb,
+     'grey-30' : #c2c6cc,
+     'grey-40' : #9ea2a8,
+     'grey-50' : #686c73,
+     'grey-60' : #30363d
+ );
+
+ /// Get a color value by name and variant
+ ///
+ /// @param {String} $color-name
+ ///   Color name (e.g. 'blue', 'gold')
+ ///
+ /// @example scss - Usage
+ ///   sc-color('blue')
+ ///   sc-color('blue', '2')
+ ///
+ /// @return {Color}
+ ///
+ /// @group Systems
+ @function sc-color($color-name, $variant: null) {
+     $color: null;
+
+     @if ($variant) {
+         $secondary-color-family: map-get($sc-secondary-colors, $color-name);
+
+         @if $secondary-color-family {
+             $color: map-get($secondary-color-family, $variant);
+         }
+     } @else {
+         $color: map-get($sc-colors, $color-name);
+     }
+
+     @if $color {
+         @return $color;
+     } @else {
+         $error-message-color-name: $color-name;
+         $error-message-color-description: 'color';
+         @if $variant {
+             $error-message-color-name: $color-name + ' ' + $variant;
+             $error-message-color-description: 'secondary color';
+         }
+         @error 'Style Closet Color Error: ' + $error-message-color-name + ' is an invalid ' + $error-message-color-description + '.';
+     }
+ }
+
 $MatcaColorPalette-colors: (
   'primary': (
     'base': #00bcd4,
     'light': #b2ebf2,
-    'dark': #2179ee // h1 color
+    'dark': sc-color('blue') // h1 color
   ),
   'accent': (
-    'base': #ffc107
+    'base': sc-color('green')
   ),
   'secondary': (
     'base': #727272,
@@ -21,7 +78,7 @@ $MatcaColorPalette-colors: (
   ),
   'background': (
     'base': #ffffff,
-    'dark': #f3f4f8, // background color
+    'dark': sc-color('grey-10'), // background color
   )
 );
 

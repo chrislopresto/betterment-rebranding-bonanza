@@ -3,6 +3,10 @@
 
 @import 'ember-reveal-js';
 
+@import 'slides/theme';
+@import 'slides/slides';
+@import 'slides/styles';
+
 @import 'components/presentations/benefit-slide';
 @import 'components/presentations/slide-header';
 @import 'components/presentations/slide-body';
