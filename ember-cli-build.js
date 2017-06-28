@@ -30,6 +30,7 @@ module.exports = function(defaults) {
 
   if (app.env === 'github') {
     app.options.fingerprint.enabled = true;
+    app.options.fingerprint.prepend = '/betterment-rebranding-bonanza';
   }
 
   if (app.env === 'production') {
