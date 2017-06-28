@@ -10,7 +10,7 @@ export default RevealSlide.extend({
     'backgroundTransition:data-background-transition'
   ],
 
-  backgroundColor: "#00bcd4",
+  backgroundColor: "#2179ee",
   backgroundTransition: "fade",
   centeredVertically: true,
   imageAlt: computed('name', 'description', function() {

@@ -1,0 +1,65 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super=""
+    main="Breakpoint System"
+    sub="Style Closet 2.0"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column}}
+      {{#presentations/slide-list}}
+        {{#presentations/slide-list-item}}
+          Two main breakpoints
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item type="sub"}}
+          <ul>
+            <li><span class="lsgdd-InlineCode">md</span></li>
+            <li><span class="lsgdd-InlineCode">lg</span></li>
+          </ul>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          <span class="lsgdd-InlineCode">sc-media</span> SCSS mixin
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          Responsive utility classes
+        {{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <div class="u-smallHeader">SCSS</div>
+      {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
+  .element {
+    @include sc-media('md') {
+      color: red;
+    }
+    @include sc-media($until: 'lg') {
+      color: blue;
+    }
+    @include sc-media('sm', 'lg') {
+      color: green;
+    }
+    @include sc-media('md', $and: '(orientation: landscape)') {
+      color: teal;
+    }
+    @include sc-media(950px) {
+      color: hotpink;
+    }
+  }
+      {{/reveal-code}}
+
+      <br />
+      <div class="u-smallHeader">HTML</div>
+      {{#reveal-code language="html" codeTheme="tomorrow-night"}}
+  &lt;div class="u-p-t--12 u-p-t-md--24"&gt;
+    &lt;!-- padding-top 12 default, padding-top 24 above md breakpoint --&gt;
+  &lt;/div&gt;
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <div class="lsgdd-TightContainer">
+      <img class="lsgdd-Image lsgdd-image--styleClosetLogo" src="assets/images/style-closet-logo.png" alt="Style Closet">
+    </div>
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}

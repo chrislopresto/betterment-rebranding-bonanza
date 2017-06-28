@@ -1,0 +1,53 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super=""
+    main="Spacing System"
+    sub="Style Closet 2.0"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column}}
+      {{#presentations/slide-list}}
+        {{#presentations/slide-list-item}}
+          Set of size primitives
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item type="sub"}}
+          <ul>
+            <li>Multiples of 4</li>
+            <li>Margins and paddings</li>
+            <li>Font scale and vertical rhythm</li>
+            <li>Grid gutters</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          <span class="lsgdd-InlineCode">sc-spacing</span> SCSS function
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          Utility classes
+        {{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <div class="u-smallHeader">SCSS</div>
+      {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
+  .sc-SomeComponent {
+    padding-top: sc-spacing('12');
+  }
+      {{/reveal-code}}
+
+      <br />
+      <div class="u-smallHeader">HTML</div>
+      {{#reveal-code language="html" codeTheme="tomorrow-night"}}
+  &lt;div class="u-p-t--12"&gt;
+    &lt;!-- padding-top 12 --&gt;
+  &lt;/div&gt;
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <div class="lsgdd-TightContainer">
+      <img class="lsgdd-Image lsgdd-image--styleClosetLogo" src="assets/images/style-closet-logo.png" alt="Style Closet">
+    </div>
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}

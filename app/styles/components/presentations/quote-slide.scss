@@ -13,4 +13,10 @@
     min-height: 1.5em;
     padding-bottom: 15% !important;
   }
+
+  &--alt {
+    .QuoteSlide-quote {
+      color: sc-color('grey-60') !important;
+    }
+  }
 }
