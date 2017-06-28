@@ -1,0 +1,54 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super=""
+    main="CSS Analysis"
+    sub="Stats and stories"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
+      <h3>Before</h3>
+      <div class="u-smallHeader">Retail</div>
+      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
+        Total Stylesheet Size: 702636<br />
+        Total Selectors: 9135<br />
+        Specificity Per Selector: 26.830432402846196<br />
+        Total Id Selectors: 377<br />
+        Total Important Keywords: 950<br />
+      </div>
+      <br><br>
+      <div class="u-smallHeader">Style Closet</div>
+      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
+        Total Stylesheet Size: 174164<br />
+        Total Selectors: 2335<br />
+        Specificity Per Selector: 17.213704496788008<br />
+        Total Id Selectors: 0<br />
+        Total Important Keywords: 860<br />
+      </div>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="SlideColumn--paddedLeft"}}
+      <h3>After</h3>
+      <div class="u-smallHeader">Retail</div>
+      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
+        Total Stylesheet Size: 318535<br />
+        Total Selectors: 4052<br />
+        Specificity Per Selector: 12.963474827245804<br />
+        Total Id Selectors: 1<br />
+        Total Important Keywords: 1354<br />
+      </div>
+      <br><br>
+      <div class="u-smallHeader">Style Closet</div>
+      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
+        Total Stylesheet Size: 330775<br />
+        Total Selectors: 3446<br />
+        Specificity Per Selector: 12.002611723737667<br />
+        Total Id Selectors: 0<br />
+        Total Important Keywords: 1337<br />
+      </div>
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}
