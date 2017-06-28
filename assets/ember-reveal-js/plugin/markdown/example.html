@@ -116,10 +116,10 @@
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/plugin/markdown/marked-c984d0043d05995498da0efea7742fef.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/plugin/markdown/markdown-b26af7ad4771d07df63a14743aba043f.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/plugin/highlight/highlight-c8012182b3695a0c523b84b2a9c839fd.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/plugin/notes/notes-cffa1100aee0181e1e787eb7c1500823.js' }
+					{ src: '/betterment-rebranding-bonanzaassets/ember-reveal-js/plugin/markdown/marked-c984d0043d05995498da0efea7742fef.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '/betterment-rebranding-bonanzaassets/ember-reveal-js/plugin/markdown/markdown-b26af7ad4771d07df63a14743aba043f.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '/betterment-rebranding-bonanzaassets/ember-reveal-js/plugin/highlight/highlight-c8012182b3695a0c523b84b2a9c839fd.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/betterment-rebranding-bonanzaassets/ember-reveal-js/plugin/notes/notes-cffa1100aee0181e1e787eb7c1500823.js' }
 				]
 			});
 

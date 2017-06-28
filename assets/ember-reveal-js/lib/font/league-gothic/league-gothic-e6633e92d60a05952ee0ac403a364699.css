@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'League Gothic';
-    src: url('https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/lib/font/league-gothic/league-gothic-9900a4643cc63c5d8f969d2196f72572.eot');
-    src: url('https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/lib/font/league-gothic/league-gothic-9900a4643cc63c5d8f969d2196f72572.eot?#iefix') format('embedded-opentype'),
-         url('https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/lib/font/league-gothic/league-gothic-cd382dc8a9d6317864b5810a320effc5.woff') format('woff'),
-         url('https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/assets/ember-reveal-js/lib/font/league-gothic/league-gothic-91295fa87df918411b49b7531da5d558.ttf') format('truetype');
+    src: url('/betterment-rebranding-bonanzaassets/ember-reveal-js/lib/font/league-gothic/league-gothic-9900a4643cc63c5d8f969d2196f72572.eot');
+    src: url('/betterment-rebranding-bonanzaassets/ember-reveal-js/lib/font/league-gothic/league-gothic-9900a4643cc63c5d8f969d2196f72572.eot?#iefix') format('embedded-opentype'),
+         url('/betterment-rebranding-bonanzaassets/ember-reveal-js/lib/font/league-gothic/league-gothic-cd382dc8a9d6317864b5810a320effc5.woff') format('woff'),
+         url('/betterment-rebranding-bonanzaassets/ember-reveal-js/lib/font/league-gothic/league-gothic-91295fa87df918411b49b7531da5d558.ttf') format('truetype');
 
     font-weight: normal;
     font-style: normal;
