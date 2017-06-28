@@ -13,7 +13,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy-github": "ember github-pages:commit --message \"Release\" --environment=github"
+    "deploy-github": "ember github-pages:commit --message \"Release\""
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.5.0",
