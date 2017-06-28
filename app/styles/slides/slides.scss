@@ -334,6 +334,17 @@
     }
   }
 
+  &-CssForaysSlide {
+    &-imageContainer {
+      // text-align: left;
+      // padding-top: 3rem !important;
+      padding-left: 3rem !important;
+    }
+    &-image {
+      max-height: 500px !important;
+    }
+  }
+
   &-ObjectivesSlide {
     &-promiseContainer {
       // text-align: left;
@@ -354,8 +365,13 @@
     img.lsgdd-ObjectivesSlide-promise,
     img.lsgdd-ExampleUiElementsSlide-result,
     img.lsgdd-ExampleAnimationsSlide-result,
-    img.lsgdd-ExampleMultiStepSlide-result {
+    img.lsgdd-ExampleMultiStepSlide-result,
+    img.lsgdd-image--boxShadow {
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26) !important;
+    }
+
+    img.lsgdd-image--maxHeight630 {
+      max-height: 630px !important;
     }
   }
 }

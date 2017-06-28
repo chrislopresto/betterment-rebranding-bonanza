@@ -1,0 +1,45 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super=""
+    main="Launch Techniques"
+    sub="Trailblazing"
+  }}
+  {{#presentations/slide-body columns=3}}
+    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
+      <div class="u-smallHeader">Application Layout</div>
+      {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
+  &lt;% if test_track_visitor.ab :rebrand_enabled, context: 'retail' %&gt;
+    &lt;%= stylesheet_link_tag 'application_rebrand', media: 'all', 'data-turbolinks-track' => true %&gt;
+  &lt;% else %&gt;
+    &lt;%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %&gt;
+  &lt;% end %&gt;
+      {{/reveal-code}}
+
+      <br>
+      <div class="u-smallHeader">Feature Flag Migration</div>
+      {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class AddRebrandFeatureFlag &lt; ActiveRecord::Migration
+    def change
+      TestTrack.update_config do |c|
+        c.split :rebrand_enabled, true: 0, false: 100
+      end
+    end
+  end
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="SlideColumn--paddedLeft SlideColumn--paddedRight"}}
+      <div class="lsgdd-TightContainer lsgdd-ObjectivesSlide-promiseContainer">
+        <div class="u-smallHeader">Before</div>
+        <img class="lsgdd-Image lsgdd-image--maxHeight630" src="assets/images/trailblaze-flag-before.png" alt="Before">
+      </div>
+    {{/presentations/slide-column}}
+
+    {{#presentations/slide-column class="SlideColumn--paddedLeft"}}
+      <div class="u-smallHeader">After</div>
+      <div class="lsgdd-TightContainer lsgdd-ObjectivesSlide-promiseContainer">
+        <img class="lsgdd-Image lsgdd-image--maxHeight630" src="assets/images/trailblaze-flag-after.png" alt="After">
+      </div>
+    {{/presentations/slide-column}}
+
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

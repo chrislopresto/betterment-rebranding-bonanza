@@ -10,6 +10,12 @@
   &-grayscale {
     filter: grayscale(83%);
   }
+
+  &-smallHeader {
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    margin-bottom: .5rem !important;
+  }
 }
 
 .lsgdd {

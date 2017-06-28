@@ -1,0 +1,39 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super="Tech Dive"
+    main="Rebrand View Variant"
+    sub="Multiple Rails front ends"
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
+      <div class="u-smallHeader">Application Controller</div>
+      {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class ApplicationController &lt; ActionController::Base
+    before_action :set_rebrand_variant
+
+    def set_rebrand_variant
+      request.variant = :rebrand if rebrand_enabled?
+    end
+
+    # ...
+  end
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="SlideColumn--paddedLeft"}}
+      <div class="u-smallHeader">show.html.erb</div>
+
+      {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
+  &lt;h1&gt;Out with the old&lt;/h1&gt;
+  &lt;p&gt;I am the original view.&lt;/h1&gt;
+      {{/reveal-code}}
+
+      <br />
+      <div class="u-smallHeader">show.html+rebrand.erb</div>
+
+      {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
+    &lt;h1&gt;In with the new&lt;/h1&gt;
+    &lt;p&gt;I am the new view.&lt;/h1&gt;
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}
