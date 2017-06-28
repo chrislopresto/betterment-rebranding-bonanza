@@ -1,0 +1,26 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super="Tech Dive"
+    main="Rails View Variants"
+    sub="Multiple view layers"
+  }}
+  {{#presentations/slide-body columns=1}}
+    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
+      {{#presentations/slide-list}}
+        {{#presentations/slide-list-item}}
+          Action Pack Variant
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item type="sub"}}
+          <ul>
+            <li>Custom view format defined in your application</li>
+            <li>Strategy pattern to choose a version of a view</li>
+            <li>Touted as a way to serve different content to different device types</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          Serve different content based on rebrand feature flag
+        {{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

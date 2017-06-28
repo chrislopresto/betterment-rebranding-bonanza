@@ -1,6 +1,6 @@
 .TermSlide {
   &-term {
-    color: #00bcd4 !important;
+    color: sc-color('blue') !important;
     padding: 8rem 0 2rem !important;
     font-weight: bold !important;
     font-size: 6rem !important;
@@ -15,5 +15,11 @@
     color: white;
     font-size: 4rem !important;
     max-width: 80% !important;
+  }
+
+  &--alt {
+    .TermSlide-term {
+      color: sc-color('grey-60') !important;
+    }
   }
 }
