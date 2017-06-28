@@ -28,6 +28,10 @@ module.exports = function(defaults) {
   //   app.options.fingerprint.customHash = null;
   // }
 
+  if (app.env === 'github') {
+    app.options.fingerprint.enabled = true;
+  }
+
   if (app.env === 'production') {
     app.options.fingerprint.prepend = 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/';
   }
