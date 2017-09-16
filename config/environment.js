@@ -42,5 +42,9 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
+  if (environment === 'production') {
+    ENV.rootURL = 'http://betterment-rebranding-bonanza-assets.s3.amazonaws.com/';
+  }
+
   return ENV;
 };
