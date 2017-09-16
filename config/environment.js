@@ -42,11 +42,5 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
-    ENV.locationType = 'hash';
-    ENV.rootURL = '/betterment-rebranding-bonanza/';
-
-  }
-
   return ENV;
 };

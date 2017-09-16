@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('presentations', function() {
+    this.route('betterment-rebranding-bonanza');
+  });
 });
 
 export default Router;
