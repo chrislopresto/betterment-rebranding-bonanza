@@ -34,8 +34,7 @@ module.exports = function(defaults) {
   // }
 
   if (app.env === 'production') {
-    app.options.fingerprint.prepend = '/betterment-rebranding-bonanza/';
-    // app.options.fingerprint.prepend = 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/';
+    app.options.fingerprint.prepend = 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/';
   }
 
   return app.toTree();
