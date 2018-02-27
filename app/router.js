@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('presentations', function() {
-    this.route('betterment-rebranding-bonanza');
+    this.route('hot-swapping-our-rails-front-end-in-secret');
   });
 });
 
