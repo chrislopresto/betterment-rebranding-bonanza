@@ -40,10 +40,12 @@ module.exports = function(deployTarget) {
 
   return new Promise(function(resolve, reject) {
     var exec = require("child_process").exec;
-    var command = "heroku config:get REDISTOGO_URL --app " + herokuAppName;
+    var command = "heroku config:get REDIS_URL --app " + herokuAppName;
     exec(command, function(error, stdout /*, stderr*/) {
       ENV.redis.url = stdout.replace(/\n/, "").replace(/\/\/h:/, "//:");
-      if (error) {
+      var redisUrlMissing = ENV.redis.url === '';
+      if (error || redisUrlMissing) {
+        console.error('Error:', error, redisUrlMissing);
         reject(error);
       } else {
         resolve(ENV);
