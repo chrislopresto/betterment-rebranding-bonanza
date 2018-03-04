@@ -38,19 +38,16 @@ module.exports = function(deployTarget) {
     ENV.s3.bucket = 'betterment-rebranding-bonanza-assets';
   }
 
-  // Return promise that resolves with the ENV object in order to
-  // asynchronously retrieve redis url from heroku for production deploys
-  return Promise.resolve().then(function() {
-    if (deployTarget === 'production') {
-      return new Promise(function(resolve/*, reject*/) {
-        var exec = require('child_process').exec;
-        exec('heroku config:get REDIS_URL --app ' + herokuAppName, function (error, stdout/*, stderr*/) {
-          ENV.redis.url = stdout.replace(/\n/, '').replace(/\/\/h:/, '//:');
-          resolve(ENV);
-        });
-      });
-    }
-
-    return ENV;
+  return new Promise(function(resolve, reject) {
+    var exec = require("child_process").exec;
+    var command = "heroku config:get REDISTOGO_URL --app " + herokuAppName;
+    exec(command, function(error, stdout /*, stderr*/) {
+      ENV.redis.url = stdout.replace(/\n/, "").replace(/\/\/h:/, "//:");
+      if (error) {
+        reject(error);
+      } else {
+        resolve(ENV);
+      }
+    });
   });
 };
