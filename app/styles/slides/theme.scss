@@ -14,3 +14,13 @@
   color: matca-palette-color('secondary') !important;
 }
 $bulletTextUnderlineColor: matca-palette-color('secondary', 'base', .4);
+
+@each $color in map-keys($sc-colors) {
+  .reveal .slides section .fragment.highlight-#{$color}.visible {
+    color: sc-color($color);
+  }
+
+  .u-color-#{$color} {
+    color: sc-color($color) !important;
+  }
+}

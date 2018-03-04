@@ -62,7 +62,7 @@
 
 $MatcaColorPalette-colors: (
   'primary': (
-    'base': #00bcd4,
+    'base': sc-color('blue'),
     'light': #b2ebf2,
     'dark': sc-color('blue') // h1 color
   ),
