@@ -4,6 +4,12 @@
     {{#if qualifier}}
       <div class="TermSlide-qualifier">{{qualifier}}</div>
     {{/if}}
-    <div class="TermSlide-definition">{{definition}}</div>
+    {{#if hasBlock}}
+      <div class="TermSlide-definition">
+        {{yield}}
+      </div>
+    {{else}}
+      <div class="TermSlide-definition">{{definition}}</div>
+    {{/if}}
   {{/presentations/slide-body}}
 </div>
