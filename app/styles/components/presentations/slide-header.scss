@@ -1,6 +1,6 @@
 .SlideHeader {
-  padding: 0.5rem !important;
-  margin-bottom: 2rem !important;
+  // padding: 0.5rem !important;
+  margin-bottom: 2.5rem !important;
 
   &--left {
     text-align: left !important;
@@ -9,17 +9,20 @@
   &-super {
     font-size: 1rem !important;
     text-transform: uppercase;
-    padding-bottom: .5rem !important;
+    // padding-bottom: .5rem !important;
     height: 1.9rem;
   }
   &-main {
     font-size: 5rem !important;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     line-height: 1 !important;
+    font-weight: 500 !important;
+    padding-bottom: .5rem !important;
   }
   &-sub {
     font-size: 2rem !important;
     text-transform: uppercase;
-    padding-top: .5rem !important;
+    // padding-top: .5rem !important;
+    // font-weight: 200 !important;
   }
 }
