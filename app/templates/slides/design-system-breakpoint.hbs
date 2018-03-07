@@ -7,7 +7,7 @@
   {{#presentations/slide-body columns=2}}
     {{#presentations/slide-column}}
       {{#presentations/slide-list}}
-        {{#presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="SlideListItem--withSubItems"}}
           Two main breakpoints
         {{/presentations/slide-list-item}}
         {{#presentations/slide-list-item type="sub"}}
@@ -17,40 +17,29 @@
           </ul>
         {{/presentations/slide-list-item}}
         {{#presentations/slide-list-item}}
-          <span class="lsgdd-InlineCode">sc-media</span> SCSS mixin
-        {{/presentations/slide-list-item}}
-        {{#presentations/slide-list-item}}
           Responsive utility classes
         {{/presentations/slide-list-item}}
       {{/presentations/slide-list}}
     {{/presentations/slide-column}}
     {{#presentations/slide-column}}
-      <div class="u-smallHeader">SCSS</div>
+      <div class="u-smallHeader">SCSS mixins</div>
       {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
   .element {
+    // padding-top of size 12 by default
+    padding-top: sc-spacing('12');
+
     @include sc-media('md') {
-      color: red;
-    }
-    @include sc-media($until: 'lg') {
-      color: blue;
-    }
-    @include sc-media('sm', 'lg') {
-      color: green;
-    }
-    @include sc-media('md', $and: '(orientation: landscape)') {
-      color: teal;
-    }
-    @include sc-media(950px) {
-      color: hotpink;
+      // size 24 above md breakpoint
+      padding-top: sc-spacing('24');
     }
   }
       {{/reveal-code}}
 
       <br />
-      <div class="u-smallHeader">HTML</div>
+      <div class="u-smallHeader">Responsive utility classes</div>
       {{#reveal-code language="html" codeTheme="tomorrow-night"}}
-  &lt;div class="u-p-t--12 u-p-t-md--24"&gt;
-    &lt;!-- padding-top 12 default, padding-top 24 above md breakpoint --&gt;
+  &lt;div class="u-p-t--12 u-p-t--24@md"&gt;
+    &lt;!-- padding-top of size 12 by default, size 24 above md breakpoint --&gt;
   &lt;/div&gt;
       {{/reveal-code}}
     {{/presentations/slide-column}}

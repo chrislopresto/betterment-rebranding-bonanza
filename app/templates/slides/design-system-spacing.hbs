@@ -7,7 +7,7 @@
   {{#presentations/slide-body columns=2}}
     {{#presentations/slide-column}}
       {{#presentations/slide-list}}
-        {{#presentations/slide-list-item}}
+        {{#presentations/slide-list-item class="SlideListItem--withSubItems"}}
           Set of size primitives
         {{/presentations/slide-list-item}}
         {{#presentations/slide-list-item type="sub"}}
@@ -16,18 +16,13 @@
             <li>Margins and paddings</li>
             <li>Font scale and vertical rhythm</li>
             <li>Grid gutters</li>
+            <li>Every space you perceive</li>
           </ul>
-        {{/presentations/slide-list-item}}
-        {{#presentations/slide-list-item}}
-          <span class="lsgdd-InlineCode">sc-spacing</span> SCSS function
-        {{/presentations/slide-list-item}}
-        {{#presentations/slide-list-item}}
-          Utility classes
         {{/presentations/slide-list-item}}
       {{/presentations/slide-list}}
     {{/presentations/slide-column}}
     {{#presentations/slide-column}}
-      <div class="u-smallHeader">SCSS</div>
+      <div class="u-smallHeader">SCSS functions</div>
       {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
   .sc-SomeComponent {
     padding-top: sc-spacing('12');
@@ -35,7 +30,7 @@
       {{/reveal-code}}
 
       <br />
-      <div class="u-smallHeader">HTML</div>
+      <div class="u-smallHeader">Utility classes</div>
       {{#reveal-code language="html" codeTheme="tomorrow-night"}}
   &lt;div class="u-p-t--12"&gt;
     &lt;!-- padding-top 12 --&gt;
