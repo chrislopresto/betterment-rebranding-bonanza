@@ -3,6 +3,10 @@
     flex-basis: 100%;
   }
 
+  &-flexAlignSelfCenter {
+    align-self: center !important;
+  }
+
   &-rounded {
     border-radius: 10px;
   }
