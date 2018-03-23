@@ -12,10 +12,8 @@
     before_action :set_rebrand_variant
 
     def set_rebrand_variant
-      request.variant = :rebrand if rebrand_enabled?
+      request.variant = :rebrand if test_track_visitor.ab :rebrand_enabled
     end
-
-    # ...
   end
       {{/reveal-code}}
     {{/presentations/slide-column}}
@@ -24,7 +22,7 @@
 
       {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
   &lt;h1&gt;Out with the old&lt;/h1&gt;
-  &lt;p&gt;I am the original view.&lt;/h1&gt;
+  &lt;p&gt;I am the original view.&lt;/p&gt;
       {{/reveal-code}}
 
       <br />
@@ -32,7 +30,7 @@
 
       {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
     &lt;h1&gt;In with the new&lt;/h1&gt;
-    &lt;p&gt;I am the new view.&lt;/h1&gt;
+    &lt;p&gt;I am the new view.&lt;/p&gt;
       {{/reveal-code}}
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}

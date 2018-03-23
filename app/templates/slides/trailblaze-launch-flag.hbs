@@ -6,21 +6,21 @@
   }}
   {{#presentations/slide-body columns=2}}
     {{#presentations/slide-column class="SlideColumn--paddedRight"}}
-      <div class="u-smallHeader">Add rebrand feature flag</div>
-      {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
-  class AddRebrandFeatureFlag &lt; ActiveRecord::Migration
-    def change
-      TestTrack.update_config do |c|
-        c.split :rebrand_enabled, true: 0, false: 100
-      end
-    end
-  end
+      <div class="u-smallHeader">application.scss</div>
+      {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
+  @import 'style-closet';
+      {{/reveal-code}}
+
+      <br>
+      <div class="u-smallHeader">application_rebrand.scss</div>
+      {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
+  @import 'style-closet-rebrand';
       {{/reveal-code}}
 
       <br>
       <div class="u-smallHeader">Application layout</div>
       {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
-  &lt;% if test_track_visitor.ab :rebrand_enabled, context: 'retail' %&gt;
+  &lt;% if test_track_visitor.ab :rebrand_enabled %&gt;
     &lt;%= stylesheet_link_tag 'application_rebrand' %&gt;
   &lt;% else %&gt;
     &lt;%= stylesheet_link_tag 'application' %&gt;
