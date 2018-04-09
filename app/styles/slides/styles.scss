@@ -20,6 +20,12 @@
     font-size: 1rem !important;
     margin-bottom: .5rem !important;
   }
+
+  &-image {
+    &--s {
+      max-height: 240px !important;
+    }
+  }
 }
 
 .lsgdd-FreestyleSlide img.u-shadow,
