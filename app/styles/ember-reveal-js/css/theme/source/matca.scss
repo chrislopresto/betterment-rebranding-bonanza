@@ -78,7 +78,8 @@ $MatcaColorPalette-colors: (
   ),
   'background': (
     'base': #ffffff,
-    'dark': sc-color('grey-10'), // background color
+    'dark': sc-color('grey-20'), // background color
+    // 'dark': #f3f4f8 // background color
   )
 );
 

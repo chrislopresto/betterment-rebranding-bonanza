@@ -1,26 +1,28 @@
 {{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
   {{presentations/slide-header
     super=""
-    main="Feature Flag Framework"
+    main="Style Closet"
     sub="Rebranding Prerequisites"
   }}
-  {{#presentations/slide-body columns=1}}
+  {{#presentations/slide-body columns=2}}
     {{#presentations/slide-column}}
       {{#presentations/slide-list}}
         {{#presentations/slide-list-item class="SlideListItem--withSubItems"}}
-          Dark deploying behind a feature flag let us
+          Our design system
         {{/presentations/slide-list-item}}
         {{#presentations/slide-list-item type="sub"}}
           <ul>
-            <li>Slice work into small pieces</li>
-            <li>Ship in secret</li>
-            <li>Test and call audibles</li>
-            <li>Change no code on launch day</li>
+            <li>Shared patterns and components</li>
+            <li>Integrated in all our web apps</li>
+            <li class="fragment">Needed to be rewritten</li>
           </ul>
         {{/presentations/slide-list-item}}
       {{/presentations/slide-list}}
     {{/presentations/slide-column}}
     {{#presentations/slide-column}}
+      <div class="lsgdd-TightContainer">
+        <img class="lsgdd-Image lsgdd-ObjectivesSlide-promise" src="assets/images/style-closet-1.x.png" alt="When launching a design system, it helps to already have one.">
+      </div>
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
   {{#presentations/slide-footer}}
