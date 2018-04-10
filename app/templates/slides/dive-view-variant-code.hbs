@@ -1,10 +1,10 @@
 {{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
   {{presentations/slide-header
-    super="Tech Dive"
+    super="Multiple view layers"
     main="Rebrand View Variant"
-    sub="Multiple view layers"
+    sub=""
   }}
-  {{#presentations/slide-body columns=2}}
+  {{#presentations/slide-body columns=1}}
     {{#presentations/slide-column class="SlideColumn--paddedRight"}}
       <div class="u-smallHeader">Application Controller</div>
       {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
@@ -15,22 +15,6 @@
       request.variant = :rebrand if test_track_visitor.ab :rebrand_enabled
     end
   end
-      {{/reveal-code}}
-    {{/presentations/slide-column}}
-    {{#presentations/slide-column class="SlideColumn--paddedLeft"}}
-      <div class="u-smallHeader">show.html.erb</div>
-
-      {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
-  &lt;h1&gt;Out with the old&lt;/h1&gt;
-  &lt;p&gt;I am the original view.&lt;/p&gt;
-      {{/reveal-code}}
-
-      <br />
-      <div class="u-smallHeader">show.html+rebrand.erb</div>
-
-      {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
-    &lt;h1&gt;In with the new&lt;/h1&gt;
-    &lt;p&gt;I am the new view.&lt;/p&gt;
       {{/reveal-code}}
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
