@@ -1,62 +1,48 @@
 {{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
   {{presentations/slide-header
-    super="Tech Dive"
+    super="Commit"
     main="Opt Out Mode"
-    sub="Multiple view layers"
+    sub=""
   }}
-  {{#presentations/slide-body columns=2}}
-    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
+  {{#presentations/slide-body columns=2 class="u-flexJustifySpaceBetween"}}
+    {{#presentations/slide-column class="u-flex55"}}
+      <div class="u-smallHeader">Controller</div>
+
+      {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class SomeController &lt; ApplicationController
+    rebrand_opt_out
+  end
+      {{/reveal-code}}
+      <br>
       <div class="u-smallHeader">Application Controller</div>
       {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
   class ApplicationController &lt; ActionController::Base
-    def self.rebrand_opt_out(opts = {})
-      self.rebrand_opt_out_actions = [opts.delete(:on)].flatten
-      before_action :opt_out_of_rebrand
+    before_action :set_rebrand_variant
+
+    class_attribute :rebrand_opt_out
+    def self.rebrand_opt_out
+      self.rebrand_opt_out = true
     end
 
     private
 
-    def opt_out_of_rebrand
-      applicable_to_action = self.class.rebrand_opt_out_actions.include?(:all) || self.class.rebrand_opt_out_actions.include?(params[:action].to_sym)
-      request.variant = :opt_out if rebrand_enabled? && applicable_to_action
+    def set_rebrand_variant
+      request.variant = rebrand_variant if test_track_visitor.ab :rebrand_enabled
     end
 
-    def rebrand_opt_out?
-      request.variant == [:opt_out]
+    def rebrand_variant
+      self.rebrand_opt_out ? :opt_out : :rebrand
     end
   end
       {{/reveal-code}}
 
-      <br />
+
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-flex40"}}
       <div class="u-smallHeader">Opt Out Mode</div>
       <div class="lsgdd-TightContainer">
-        <img class="lsgdd-Image lsgdd lsgdd-image--maxHeight230" src="assets/images/opt-out-mode.gif" alt="Opt Out Mode">
+        <img class="lsgdd-Image u-shadow" src="assets/images/example-opt-out.png" alt="Opt Out Mode">
       </div>
-    {{/presentations/slide-column}}
-    {{#presentations/slide-column class="SlideColumn--paddedLeft"}}
-    <div class="u-smallHeader">Controller</div>
-
-    {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
-    class SomeController &lt; ApplicationController
-      rebrand_opt_out on: :all
-    end
-    {{/reveal-code}}
-
-    <br>
-    <div class="u-smallHeader">show.html.erb</div>
-
-    {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
-    &lt;h1&gt;Out with the old&lt;/h1&gt;
-    &lt;p&gt;I am the original view.&lt;/h1&gt;
-    {{/reveal-code}}
-
-    <br />
-    <div class="u-smallHeader">show.html+opt_out.erb</div>
-
-    {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
-    &lt;h1&gt;Not quite in with the new&lt;/h1&gt;
-    &lt;p&gt;I am a reskinned version of the old view.&lt;/h1&gt;
-    {{/reveal-code}}
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
 {{/reveal-slide}}

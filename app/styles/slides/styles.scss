@@ -25,6 +25,10 @@
     flex-basis: 60% !important;
     max-width: 60% !important;
   }
+  &-flex55 {
+    flex-basis: 55% !important;
+    max-width: 55% !important;
+  }
   &-flex50 {
     flex-basis: 50% !important;
     max-width: 50% !important;
@@ -50,12 +54,26 @@
     justify-content: space-between !important;
   }
 
+  &-beforeAfter {
+    > * {
+      flex-basis: auto !important;
+      max-width: none !important;
+    }
+  }
+
+  &-textLeft {
+    text-align: left;
+  }
   &-textRight {
     text-align: right;
   }
 
   &-flexAlignSelfCenter {
     align-self: center !important;
+  }
+
+  &-ph--1 {
+    padding: 0 1rem !important;
   }
 
   &-rounded {
@@ -89,6 +107,9 @@
       max-height: 480px !important;
     }
 
+    &--l0 {
+      max-height: 580px !important;
+    }
     &--l {
       max-height: 630px !important;
     }

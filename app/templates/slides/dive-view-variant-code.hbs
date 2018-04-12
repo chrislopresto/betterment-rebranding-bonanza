@@ -23,6 +23,8 @@
   class ApplicationController &lt; ActionController::Base
     before_action :set_rebrand_variant
 
+    private
+
     def set_rebrand_variant
       request.variant = :rebrand if test_track_visitor.ab :rebrand_enabled
     end
