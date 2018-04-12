@@ -4,30 +4,52 @@
     main="Launch Techniques"
     sub=""
   }}
-  {{#presentations/slide-body columns=2}}
-    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
-      <h3>Idea</h3>
-      <p>
-        Rebrand design system
-      </p>
-      <p>
-        Use new CSS behind feature flag
-      </p>
-      <p>
-        Add view logic
-      </p>
-    {{/presentations/slide-column}}
-    {{#presentations/slide-column class="SlideColumn--paddedLeft"}}
-      <h3 class="fragment" data-fragment-index="1">Result</h3>
-      <p>
-        <span class="fragment" data-fragment-index="1">✅ &nbsp;</span>
-      </p>
-      <p>
-        <span class="fragment" data-fragment-index="2">✅ &nbsp;</span>
-      </p>
-      <p>
-        <span class="fragment" data-fragment-index="3">❌ &nbsp;</span>
-      </p>
+  {{#presentations/slide-body columns=1}}
+    {{#presentations/slide-column class=""}}
+      <div class="ReportCard u-shadow u-flex70">
+        <div class="ReportCard-body">
+          <div class="ReportCard-spacer"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-bodyItem">
+            <h3 class="ReportCard-headerItemText">Idea</h3>
+          </div>
+          <div class="ReportCard-bodyItem ReportCard-spacedBodyItem">
+            <h3 class="ReportCard-headerItemText">Result</h3>
+          </div>
+        </div>
+        <div class="ReportCard-body">
+          <div class="ReportCard-spacer"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-bodyItem">Rebrand design system</div>
+          <div class="ReportCard-bodyItem ReportCard-spacedBodyItem">
+            <p class="ReportCard-score"><span class="fragment" data-fragment-index="1">✅</span></p>
+          </div>
+        </div>
+        <div class="ReportCard-body">
+          <div class="ReportCard-spacer"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-bodyItem">Use new CSS behind feature flag</div>
+          <div class="ReportCard-bodyItem ReportCard-spacedBodyItem">
+            <p class="ReportCard-score"><span class="fragment" data-fragment-index="2">✅</span></p>
+          </div>
+        </div>
+        <div class="ReportCard-body">
+          <div class="ReportCard-spacer"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-divider"></div>
+          <div class="ReportCard-bodyItem">Add view logic</div>
+          <div class="ReportCard-bodyItem ReportCard-spacedBodyItem">
+            <p class="ReportCard-score"><span class="fragment" data-fragment-index="3">❌</span></p>
+          </div>
+        </div>
+      </div>
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
   {{#presentations/slide-footer}}

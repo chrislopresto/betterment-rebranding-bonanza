@@ -74,6 +74,65 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26) !important;
 }
 
+.ReportCard {
+  background-color: #faf286;
+  width: 100%;
+
+  &-header,
+  &-body {
+    display: flex;
+  }
+
+  &-spacer {
+    width: 100px;
+    border-bottom: solid 2px sc-color('grey-30') !important;
+  }
+
+  &-divider {
+    width: 12px;
+    border-right: solid 4px #a64d15 !important;
+    border-bottom: solid 2px sc-color('grey-30') !important;
+  }
+
+  &-headerItem,
+  &-bodyItem {
+    border-bottom: solid 2px sc-color('grey-30') !important;
+    width: 50%;
+    font-weight: bold;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-headerItem {
+    justify-content: center;
+    display: flex;
+    height: 4rem;
+  }
+
+  &-headerItemText {
+    font-weight: bold !important;
+    margin-bottom: 0 !important;
+  }
+
+  &-bodyItem {
+    display: flex;
+    height: 4rem;
+    padding: 1rem !important;
+    align-items: center;
+  }
+
+  &-spacedBodyItem {
+    padding-left: 30px !important;
+  }
+
+  &-score {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0;
+    margin-top: 12px;
+  }
+}
 
 .lsgdd {
   &-Presentation {
