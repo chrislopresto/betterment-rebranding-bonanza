@@ -1,19 +1,29 @@
 {{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
   {{presentations/slide-header
     super="Spike"
-    main="View Variants"
+    main="Action Pack Variants"
     sub=""
   }}
-  {{#presentations/slide-body columns=1}}
-    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
+  {{#presentations/slide-body columns=2 class="u-flexJustifySpaceBetween"}}
+    {{#presentations/slide-column class="u-flex60"}}
       {{#presentations/slide-list}}
         {{#presentations/slide-list-item}}
-          Custom view format defined in your application
+          Custom request format defined in your application
         {{/presentations/slide-list-item}}
         {{#presentations/slide-list-item}}
-          Controller => show.html.erb image
+          Set the variant in a <code>before_action</code>
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          Provide separate templates for each variant
         {{/presentations/slide-list-item}}
       {{/presentations/slide-list}}
     {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-flex30 u-textRight"}}
+    {{/presentations/slide-column}}
   {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <div class="lsgdd-TightContainer">
+      <img class="lsgdd-Image u-image--s" src="assets/images/rails-in-space.png" alt="Rails in space">
+    </div>
+  {{/presentations/slide-footer}}
 {{/reveal-slide}}

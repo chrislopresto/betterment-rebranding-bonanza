@@ -1,4 +1,10 @@
 .u {
+  &-flex {
+    display: flex !important;
+  }
+  &-flexCol {
+    flex-direction: column !important;
+  }
   &-flex100 {
     flex-basis: 100% !important;
     max-width: 100% !important;
@@ -60,6 +66,10 @@
     filter: grayscale(83%);
   }
 
+  &-height--660 {
+    height: 660px !important;
+  }
+
   &-smallHeader {
     font-weight: bold !important;
     font-size: 1rem !important;
@@ -73,6 +83,10 @@
 
     &--m {
       max-height: 400px !important;
+    }
+
+    &--m2 {
+      max-height: 480px !important;
     }
 
     &--l {

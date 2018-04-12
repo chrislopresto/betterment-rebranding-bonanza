@@ -1,11 +1,23 @@
 {{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
   {{presentations/slide-header
     super="Spike"
-    main="Rebrand View Variant"
+    main="Rebrand Variant"
     sub=""
   }}
-  {{#presentations/slide-body columns=1}}
-    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
+  {{#presentations/slide-body columns=1 class="u-height--660"}}
+    {{#presentations/slide-column class="SlideColumn--paddedRight u-flex u-flexCol u-flexJustifySpaceBetween"}}
+      {{#presentations/slide-list}}
+        {{#presentations/slide-list-item}}
+          Single rebrand conditional
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          No code changes to existing views
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          Separate rebranded versions of everything
+        {{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+      <div>
       <div class="u-smallHeader">Application Controller</div>
       {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
   class ApplicationController &lt; ActionController::Base
@@ -16,6 +28,7 @@
     end
   end
       {{/reveal-code}}
+      </div>
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
 {{/reveal-slide}}
