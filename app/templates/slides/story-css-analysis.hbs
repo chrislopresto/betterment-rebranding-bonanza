@@ -4,41 +4,47 @@
     main="CSS Analysis"
     sub=""
   }}
-  {{#presentations/slide-body columns=2}}
-    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
-      <h3>Before</h3>
-      <div class="u-smallHeader">Retail</div>
+  {{#presentations/slide-body columns=1 class="u-beforeAfter"}}
+    {{#presentations/slide-column class="u-pr--1"}}
+      <h3>Style Closet</h3>
+      {{!-- Style Closet --}}
+      <div class="u-smallHeader">Before</div>
       <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size: 702636<br />
+        Total Stylesheet Size (gzip): 23K<br />
+        Total Selectors: 2335<br />
+        Specificity Per Selector: 17.2<br />
+        Total Id Selectors: 0<br />
+      </div>
+      <br><br>
+      <h3>Retail</h3>
+      {{!-- Retail --}}
+      <div class="u-smallHeader">Before</div>
+      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
+        Total Stylesheet Size (gzip): 86K<br />
         Total Selectors: 9135<br />
-        Specificity Per Selector: 26.830432402846196<br />
+        Specificity Per Selector: 26.8<br />
         Total Id Selectors: 377<br />
       </div>
-      <br><br>
-      <div class="u-smallHeader">Style Closet</div>
-      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size: 174164<br />
-        Total Selectors: 2335<br />
-        Specificity Per Selector: 17.213704496788008<br />
-        Total Id Selectors: 0<br />
-      </div>
     {{/presentations/slide-column}}
-    {{#presentations/slide-column class="SlideColumn--paddedLeft"}}
-      <h3>After</h3>
-      <div class="u-smallHeader">Retail</div>
+    {{#presentations/slide-column class=""}}
+      <h3>&nbsp;</h3>
+      {{!-- Style Closet --}}
+      <div class="u-smallHeader">After</div>
       <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size: 318535<br />
-        Total Selectors: 4052<br />
-        Specificity Per Selector: 12.963474827245804<br />
-        Total Id Selectors: 1<br />
+        Total Stylesheet Size (gzip): 36K<br />
+        Total Selectors: 3446<br />
+        Specificity Per Selector: 12.0<br />
+        Total Id Selectors: 0<br />
       </div>
       <br><br>
-      <div class="u-smallHeader">Style Closet</div>
+      <h3>&nbsp;</h3>
+      {{!-- Retail --}}
+      <div class="u-smallHeader">After</div>
       <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size: 330775<br />
-        Total Selectors: 3446<br />
-        Specificity Per Selector: 12.002611723737667<br />
-        Total Id Selectors: 0<br />
+        Total Stylesheet Size (gzip): 40K<br />
+        Total Selectors: 4052<br />
+        Specificity Per Selector: 13.0<br />
+        Total Id Selectors: 1<br />
       </div>
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
