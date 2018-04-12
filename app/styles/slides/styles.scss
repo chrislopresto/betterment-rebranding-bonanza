@@ -40,6 +40,14 @@
     max-width: 10% !important;
   }
 
+  &-flexJustifySpaceBetween {
+    justify-content: space-between !important;
+  }
+
+  &-textRight {
+    text-align: right;
+  }
+
   &-flexAlignSelfCenter {
     align-self: center !important;
   }
