@@ -4,22 +4,8 @@
     main="Action Pack Variants"
     sub=""
   }}
-  {{#presentations/slide-body columns=1}}
-    <div class="u-flex100">
-      <div class="u-flex u-flex100">
-        {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
-  class MoviesController &lt; ActionController::Base<span class="fragment" data-fragment-index="1">
-    before_action :set_variant
-
-    private
-
-    def set_variant
-      request.variant = :bot if browser.bot?
-    end</span>
-  end
-        {{/reveal-code}}
-      </div>
-      <br>
+  {{#presentations/slide-body columns=1 class="u-height--660"}}
+    {{#presentations/slide-column class="SlideColumn--paddedRight u-flex u-flexCol u-flexJustifySpaceBetween"}}
       <div class="u-flex">
         <div class="u-flex33 u-pr--1">
           <p>
@@ -30,7 +16,7 @@
           <p>
             <h3>show.html.erb</h3>
           </p>
-          <p><small>Nonbots see this</small></p>
+          <small>Nonbots see this</small>
           <div>
             <img class="lsgdd-Image u-shadow u-rounded u-image--s" src="assets/images/wall-e-people.jpg" alt="Vanilla variant">
           </div>
@@ -39,12 +25,26 @@
           <p>
             <h3 class="fragment" data-fragment-index="1">show.html+bot.erb</h3>
           </p>
-          <p><small>Bots see this</small></p>
+          <small>Bots see this</small>
           <div class="lsgdd-TightContainer">
             <img class="lsgdd-Image u-shadow u-rounded u-image--s" src="assets/images/wall-e-eve.jpg" alt="Bot variant">
           </div>
         </div>
       </div>
-    </div>
+      <div class="fragment" data-fragment-index="1">
+        <div class="u-smallHeader">Movies Controller</div>
+        {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class MoviesController &lt; ActionController::Base
+    before_action :set_variant
+
+    private
+
+    def set_variant
+      request.variant = :bot if browser.bot?
+    end
+  end
+        {{/reveal-code}}
+      </div>
+    {{/presentations/slide-column}}
   {{/presentations/slide-body}}
 {{/reveal-slide}}
