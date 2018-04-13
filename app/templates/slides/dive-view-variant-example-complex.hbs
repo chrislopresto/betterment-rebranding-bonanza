@@ -2,13 +2,48 @@
   {{presentations/slide-header
     super="Spike"
     main="Rebrand Variant"
-    sub=""
+    sub="Performance"
   }}
-  {{#presentations/slide-body columns=1}}
-    {{#presentations/slide-column class="SlideColumn--paddedRight"}}
-      <div class="lsgdd-TightContainer">
-        <img class="u-shadow" src="https://via.placeholder.com/800x600/f0b95b/ffffff&text=Complex Page">
+  {{#presentations/slide-body columns=4 class="u-beforeAfter"}}
+    {{#presentations/slide-column}}
+      <div>
+        <div class="u-smallHeader">Default</div>
+        <div class="lsgdd-TightContainer">
+          <img class="lsgdd-Image u-image--l0 u-shadow" src="assets/images/example-coming-together-performance-sm.png" alt="Small">
+        </div>
+      </div>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <div>
+        <div class="u-smallHeader">Medium breakpoint</div>
+        <div class="lsgdd-TightContainer">
+          <img class="lsgdd-Image u-image--l0 u-shadow" src="assets/images/example-coming-together-performance-md.png" alt="Medium">
+        </div>
+      </div>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <div>
+        <div class="fade-in">
+          <div class="u-smallHeader">Large breakpoint</div>
+          <div class="lsgdd-TightContainer">
+            <img class="lsgdd-Image u-image--l0 u-shadow" src="assets/images/example-coming-together-performance-lg.png" alt="Large">
+          </div>
+        </div>
+      </div>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column}}
+      <div>
+        <div class="fade-in">
+          <div class="u-smallHeader">Graph taking shape</div>
+          <div class="lsgdd-TightContainer">
+            <img class="lsgdd-Image u-image--l0 u-shadow" src="assets/images/example-coming-together-performance-graph-lg.png" alt="Large - Graph">
+          </div>
+        </div>
       </div>
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
 {{/reveal-slide}}
