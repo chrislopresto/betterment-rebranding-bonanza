@@ -5,6 +5,8 @@
     {{else}}
       <h2 class="QuoteSlide-quote">{{quote}}</h2>
     {{/if}}
-    <div class="QuoteSlide-attribution">{{attribution}}</div>
+    {{#if attribution}}
+      <div class="QuoteSlide-attribution">{{attribution}}</div>
+    {{/if}}
   {{/presentations/slide-body}}
 </div>
