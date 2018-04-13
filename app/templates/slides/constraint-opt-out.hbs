@@ -1,7 +1,7 @@
 {{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
   {{presentations/slide-header
     super="Commit"
-    main="Opt Out Mode"
+    main="Reskin Mode"
     sub=""
   }}
   {{#presentations/slide-body columns=2 class="u-flexJustifySpaceBetween"}}
@@ -10,7 +10,7 @@
 
       {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
   class SomeController &lt; ApplicationController
-    rebrand_opt_out
+    use_reskin_mode
   end
       {{/reveal-code}}
       <br>
@@ -19,9 +19,9 @@
   class ApplicationController &lt; ActionController::Base
     before_action :set_rebrand_variant
 
-    class_attribute :rebrand_opt_out
-    def self.rebrand_opt_out
-      self.rebrand_opt_out = true
+    class_attribute :use_reskin_mode
+    def self.use_reskin_mode
+      self.use_reskin_mode = true
     end
 
     private
@@ -31,7 +31,7 @@
     end
 
     def rebrand_variant
-      self.rebrand_opt_out ? :opt_out : :rebrand
+      self.use_reskin_mode ? :reskin : :rebrand
     end
   end
       {{/reveal-code}}
@@ -39,7 +39,7 @@
 
     {{/presentations/slide-column}}
     {{#presentations/slide-column class="u-flex40"}}
-      <div class="u-smallHeader">Opt Out Mode</div>
+      <div class="u-smallHeader">Reskin Mode</div>
       <div class="lsgdd-TightContainer">
         <img class="lsgdd-Image u-shadow" src="assets/images/example-opt-out.png" alt="Opt Out Mode">
       </div>
