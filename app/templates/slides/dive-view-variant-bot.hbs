@@ -9,29 +9,31 @@
       <div class="u-flex">
         <div class="u-flex33 u-pr--1">
           <p>
-            When serving
+            When serving<br>
             <a href="https://www.rottentomatoes.com/m/wall_e/">rottentomatoes.com/m/wall_e</a></p>
         </div>
         <div class="u-flex33 u-pl--1 u-pr--1">
           <p>
-            <h3>show.html.erb</h3>
+            <br>
+            humans see this
           </p>
-          <small>Nonbots see this</small>
+          <small class="fragment" data-fragment-index="2">show.html.erb</small>
           <div>
             <img class="lsgdd-Image u-shadow u-rounded u-image--s" src="assets/images/wall-e-people.jpg" alt="Vanilla variant">
           </div>
         </div>
         <div class="u-flex33 u-pl--1 fragment" data-fragment-index="1">
           <p>
-            <h3 class="fragment" data-fragment-index="1">show.html+bot.erb</h3>
+            <br>
+            but bots should see this
           </p>
-          <small>Bots see this</small>
+          <small class="fragment" data-fragment-index="2">show.html+bot.erb</small>
           <div class="lsgdd-TightContainer">
             <img class="lsgdd-Image u-shadow u-rounded u-image--s" src="assets/images/wall-e-eve.jpg" alt="Bot variant">
           </div>
         </div>
       </div>
-      <div class="fragment" data-fragment-index="1">
+      <div class="fragment" data-fragment-index="2">
         <div class="u-smallHeader">Movies Controller</div>
         {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
   class MoviesController &lt; ActionController::Base
