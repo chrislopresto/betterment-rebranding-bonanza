@@ -1,42 +1,40 @@
 {{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
   {{presentations/slide-header
     super="Stats and stories"
-    main="CSS Analysis"
+    main="CSS Payload Size"
     sub=""
   }}
   {{#presentations/slide-body columns=1 class="u-beforeAfter"}}
-    {{#presentations/slide-column class="u-pr--1"}}
+    {{#presentations/slide-column class="u-pr--3"}}
       <h3>Style Closet</h3>
-      {{!-- Style Closet --}}
-      <div class="u-smallHeader">Before</div>
-      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size (gzip): 23K<br />
-        Specificity Per Selector: 17.2<br />
+      <div class="u-bigNumber">
+        23 KB
       </div>
       <br><br>
       <h3>Retail</h3>
-      {{!-- Retail --}}
-      <div class="u-smallHeader">Before</div>
-      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size (gzip): 86K<br />
-        Specificity Per Selector: 26.8<br />
+      <div class="u-bigNumber">
+        86 KB
       </div>
     {{/presentations/slide-column}}
     {{#presentations/slide-column class=""}}
-      <h3>&nbsp;</h3>
+      <div class="lsgdd-TightContainer u-pt--2h">
+        <img class="lsgdd-Image u-image--xs" src="assets/images/arrow-right-2.png" alt="Arrow Right">
+      </div>
+      <div class="lsgdd-TightContainer u-pt--6h">
+        <img class="lsgdd-Image u-image--xs" src="assets/images/arrow-right-2.png" alt="Arrow Right">
+      </div>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-pl--3"}}
       {{!-- Style Closet --}}
-      <div class="u-smallHeader">After</div>
-      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size (gzip): 36K<br />
-        Specificity Per Selector: 12.0<br />
+      <h3>&nbsp;</h3>
+      <div class="u-bigNumber">
+        36 KB
       </div>
       <br><br>
-      <h3>&nbsp;</h3>
       {{!-- Retail --}}
-      <div class="u-smallHeader">After</div>
-      <div class="lsgdd-InlineCode lsgdd-InlineCode--small">
-        Total Stylesheet Size (gzip): 40K<br />
-        Specificity Per Selector: 13.0<br />
+      <h3>&nbsp;</h3>
+      <div class="u-bigNumber">
+        40 KB
       </div>
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
