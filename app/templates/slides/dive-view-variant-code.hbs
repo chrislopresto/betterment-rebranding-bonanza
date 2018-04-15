@@ -4,8 +4,8 @@
     main="Rebrand Variant"
     sub=""
   }}
-  {{#presentations/slide-body columns=1 class="u-height--660"}}
-    {{#presentations/slide-column class="SlideColumn--paddedRight u-flex u-flexCol u-flexJustifySpaceBetween"}}
+  {{#presentations/slide-body columns=1 class="u-flexJustifySpaceBetween"}}
+    {{#presentations/slide-column class="u-flex60"}}
       {{#presentations/slide-list}}
         {{#presentations/slide-list-item}}
           Single rebrand conditional
@@ -17,7 +17,7 @@
           Separate rebranded versions of everything
         {{/presentations/slide-list-item}}
       {{/presentations/slide-list}}
-      <div>
+      <br>
       <div class="u-smallHeader">Application Controller</div>
       {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
   class ApplicationController &lt; ActionController::Base
@@ -30,7 +30,13 @@
     end
   end
       {{/reveal-code}}
-      </div>
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-flex40"}}
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <div class="lsgdd-TightContainer">
+      <img class="lsgdd-Image u-image--s u-rounded u-shadow" src="assets/images/action-pack.jpg" alt="Action Pack">
+    </div>
+  {{/presentations/slide-footer}}
 {{/reveal-slide}}
