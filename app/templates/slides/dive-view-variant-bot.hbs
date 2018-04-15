@@ -4,38 +4,36 @@
     main="Action Pack Variants"
     sub=""
   }}
-  {{#presentations/slide-body columns=1 class="u-height--660"}}
+  {{#presentations/slide-body columns=1 class=""}}
     {{#presentations/slide-column class="SlideColumn--paddedRight u-flex u-flexCol u-flexJustifySpaceBetween"}}
-      <div class="u-flex">
-        <div class="u-flex33 u-pr--1">
+      <div class="u-flex u-flexAlignItemsCenter">
+        When serving some kind of
+        &nbsp;&nbsp;
+        <img class="lsgdd-Image u-image--xs" src="assets/images/wall-e-title.png" alt="WALL-E">
+        &nbsp;&nbsp;
+        page
+      </div>
+      <div class="u-flex u-flexAlignItemsEnd">
+        <div class="u-flex25 u-pr--1">
           <p>
-            When serving<br>
-            <a href="https://www.rottentomatoes.com/m/wall_e/">rottentomatoes.com/m/wall_e</a></p>
-        </div>
-        <div class="u-flex33 u-pl--1 u-pr--1">
-          <p>
-            <br>
-            humans see this
+            humans should see this
           </p>
           <small class="fragment" data-fragment-index="2">show.html.erb</small>
           <div>
-            <img class="lsgdd-Image u-shadow u-rounded u-image--s" src="assets/images/wall-e-people.jpg" alt="Vanilla variant">
+            <img class="lsgdd-Image u-shadow u-rounded u-image--s0" src="assets/images/wall-e-people.jpg" alt="Vanilla variant">
           </div>
         </div>
-        <div class="u-flex33 u-pl--1 fragment" data-fragment-index="1">
+        <div class="u-flex25 u-pl--1 fragment" data-fragment-index="1">
           <p>
-            <br>
             but bots should see this
           </p>
           <small class="fragment" data-fragment-index="2">show.html+bot.erb</small>
           <div class="lsgdd-TightContainer">
-            <img class="lsgdd-Image u-shadow u-rounded u-image--s" src="assets/images/wall-e-eve.jpg" alt="Bot variant">
+            <img class="lsgdd-Image u-shadow u-rounded u-image--s0" src="assets/images/wall-e-eve.jpg" alt="Bot variant">
           </div>
         </div>
-      </div>
-      <div class="fragment" data-fragment-index="2">
-        <div class="u-smallHeader">Movies Controller</div>
-        {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+        <div class="u-flex50 u-pl--1 fragment" data-fragment-index="2">
+          {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
   class MoviesController &lt; ActionController::Base
     before_action :set_variant
 
@@ -45,7 +43,8 @@
       request.variant = :bot if browser.bot?
     end
   end
-        {{/reveal-code}}
+          {{/reveal-code}}
+        </div>
       </div>
     {{/presentations/slide-column}}
   {{/presentations/slide-body}}
