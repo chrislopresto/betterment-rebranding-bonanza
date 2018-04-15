@@ -194,10 +194,17 @@
   }
 
   &-score {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 3.5rem !important;
+    line-height: 3.5rem !important;
+    display: flex !important;
+    align-items: center;
     margin: 0;
-    margin-top: 12px;
+    margin-top: 27px !important;
+    margin-left: 3px !important;
+  }
+
+  &-scoreMark {
+    display: inline-block !important;
   }
 }
 
