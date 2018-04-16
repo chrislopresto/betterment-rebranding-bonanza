@@ -247,7 +247,7 @@
   }
 
   &-spacedBodyItem {
-    padding-left: 30px !important;
+    // padding-left: 130px !important;
   }
 
   &-score {
@@ -262,6 +262,19 @@
 
   &-scoreMark {
     display: inline-block !important;
+  }
+
+  &-col1 {
+    flex-basis: 10%;
+    width: 10%;
+  }
+  &-col2 {
+    flex-basis: 50%;
+    width: 50%;
+  }
+  &-col3 {
+    flex-basis: 30%;
+    width: 30%;
   }
 }
 
