@@ -25,12 +25,12 @@
       <div class="u-smallHeader">SCSS mixins</div>
       {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
   .element {
-    // padding-top of size 12 by default
-    padding-top: sc-spacing('12');
+    // padding of size m by default
+    padding: sc-spacing('m');
 
     @include sc-media('md') {
-      // size 24 above md breakpoint
-      padding-top: sc-spacing('24');
+      // size l above md breakpoint
+      padding: sc-spacing('l');
     }
   }
       {{/reveal-code}}
@@ -38,8 +38,8 @@
       <br />
       <div class="u-smallHeader">Responsive utility classes</div>
       {{#reveal-code language="html" codeTheme="tomorrow-night"}}
-  &lt;div class="u-p-t--12 u-p-t--24@md"&gt;
-    &lt;!-- padding-top of size 12 by default, size 24 above md breakpoint --&gt;
+  &lt;div class="u-p--m u-p--l@md"&gt;
+    &lt;!-- padding of size m by default, size l above md breakpoint --&gt;
   &lt;/div&gt;
       {{/reveal-code}}
     {{/presentations/slide-column}}
