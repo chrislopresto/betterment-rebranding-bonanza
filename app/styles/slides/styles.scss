@@ -61,11 +61,17 @@
   &-flexJustifySpaceBetween {
     justify-content: space-between !important;
   }
+  &-flexJustifyStretch {
+    justify-content: stretch !important;
+  }
   &-flexAlignItemsCenter {
     align-items: center !important;
   }
   &-flexAlignItemsEnd {
     align-items: flex-end !important;
+  }
+  &-flexAlignItemsStretch {
+    align-items: stretch !important;
   }
 
   &-beforeAfter {
@@ -151,6 +157,9 @@
   }
 
   &-image {
+    &--xs0 {
+      max-height: 100px !important;
+    }
     &--xs {
       max-height: 140px !important;
     }
