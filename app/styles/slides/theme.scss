@@ -1,0 +1,34 @@
+p {
+  // font-weight: 300 !important;
+}
+
+h1 {
+  text-transform: none !important;
+}
+
+// Theme => Components
+.SlideHeader {
+  &-super {
+    color: matca-palette-color('secondary', 'light') !important;
+  }
+  &-main {
+    color: matca-palette-color('primary', 'dark') !important;
+  }
+  &-sub {
+    color: matca-palette-color('secondary') !important;
+  }
+}
+.SlideListItem--sub {
+  color: matca-palette-color('secondary') !important;
+}
+$bulletTextUnderlineColor: matca-palette-color('secondary', 'base', .4);
+
+@each $color in map-keys($sc-colors) {
+  .reveal .slides section .fragment.highlight-#{$color}.visible {
+    color: sc-color($color);
+  }
+
+  .u-color-#{$color} {
+    color: sc-color($color) !important;
+  }
+}

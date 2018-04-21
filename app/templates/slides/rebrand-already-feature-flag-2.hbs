@@ -1,0 +1,37 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super="Prerequisites"
+    main="TestTrack"
+    sub=""
+  }}
+  {{#presentations/slide-body columns=2}}
+    {{#presentations/slide-column class="u-flex60"}}
+      {{#presentations/slide-list}}
+        {{#presentations/slide-list-item class="SlideListItem--withSubItems"}}
+          Our feature flag and split testing framework
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item type="sub"}}
+          <ul>
+            <li>Consistent experiences across devices</li>
+            <li>Rails, JS, Objective C, &amp; Java clients</li>
+            <li>Chrome extension to override assignments</li>
+          </ul>
+        {{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-flex40"}}
+      <div class="lsgdd-TightContainer">
+        <img class="lsgdd-Image lsgdd-ObjectivesSlide-promise" src="assets/images/test-track.jpg" alt="When launching a design system, it helps to already have one.">
+      </div>
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <p>
+      <small>
+        <a href="https://github.com/Betterment/test_track">github.com/Betterment/test_track</a>
+      </small>
+    </p>
+  {{/presentations/slide-footer}}
+  {{#reveal-slide-notes}}
+  {{/reveal-slide-notes}}
+{{/reveal-slide}}

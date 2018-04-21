@@ -1,0 +1,53 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super="Spike"
+    main="Action Pack Variants"
+    sub=""
+  }}
+  {{#presentations/slide-body columns=1 class=""}}
+    {{#presentations/slide-column class="SlideColumn--paddedRight u-flex u-flexCol u-flexJustifySpaceBetween"}}
+      <div class="u-flex u-flexAlignItemsCenter">
+        Let's say you have a website with colorful, high-res pictures of robots.<br><br>
+      </div>
+      <div class="u-flex u-flexAlignItemsStretch">
+        <div class="u-flex25 u-pr--1">
+          <p>
+            Most people see this.
+          </p>
+          <small class="fragment" data-fragment-index="2">show.html.erb</small>
+        </div>
+        <div class="u-flex25 u-pl--1 fragment" data-fragment-index="1">
+          <p>
+            Kindles should see this.
+          </p>
+          <small class="fragment" data-fragment-index="2">show.html+kindle.erb</small>
+        </div>
+        <div class="u-flex50 u-pl--1"></div>
+      </div>
+      <div class="u-flex">
+        <div class="u-flex25 u-pr--1">
+          <img class="lsgdd-Image u-shadow u-image--m2" src="assets/images/wall-e-browser-image.png" alt="Variant - image">
+        </div>
+        <div class="u-flex25 u-pl--1 fragment" data-fragment-index="1">
+          <img class="lsgdd-Image u-image--m" src="assets/images/wall-e-kindle.png" alt="Variant - sketch">
+        </div>
+        <div class="u-flex50 u-pl--1 fragment" data-fragment-index="2">
+          {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class RobotImagesController &lt; ActionController::Base
+    before_action :set_variant
+
+    private
+
+    def set_variant
+      request.variant = :kindle if browser.device.kindle?
+    end
+  end
+          {{/reveal-code}}
+        </div>
+      </div>
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <img class="lsgdd-Image u-image--xs0" src="assets/images/wall-e-title.png" alt="WALL-E">
+  {{/presentations/slide-footer}}
+{{/reveal-slide}}

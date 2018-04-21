@@ -1,0 +1,39 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super="Trailblazing"
+    main="New CSS Behind Feature Flag"
+    sub=""
+  }}
+  {{#presentations/slide-body columns=2 class="u-flexJustifySpaceBetween"}}
+    {{#presentations/slide-column class="u-flex50"}}
+      <div class="u-smallHeader">application.scss</div>
+      {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
+  @import 'style-closet';
+      {{/reveal-code}}
+
+      <br>
+      <div class="u-smallHeader">application_rebrand.scss</div>
+      {{#reveal-code language="scss" codeTheme="tomorrow-night"}}
+  @import 'style-closet-rebrand';
+      {{/reveal-code}}
+
+      <br>
+      <div class="u-smallHeader">Application layout</div>
+      {{#reveal-code language="erb" codeTheme="tomorrow-night"}}
+  &lt;% if test_track_visitor.ab :rebrand_enabled %&gt;
+    &lt;%= stylesheet_link_tag 'application_rebrand' %&gt;
+  &lt;% else %&gt;
+    &lt;%= stylesheet_link_tag 'application' %&gt;
+  &lt;% end %&gt;
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-flex40"}}
+      <div class="lsgdd-TightContainer">
+        <div class="u-smallHeader">Start a rollover "rebranded"</div>
+        <img class="lsgdd-Image lsgdd-image--maxHeight630" src="assets/images/trailblaze-flag-after.png" alt="After">
+      </div>
+    {{/presentations/slide-column}}
+
+  {{/presentations/slide-body}}
+{{/reveal-slide}}
+

@@ -2,15 +2,24 @@
   &-quote {
     color: white !important;
     text-align: left;
+    font-size: 3em !important;
+    font-weight: 500 !important;
   }
 
   &-attribution {
     color: white;
+    font-size: 1.6em !important;
     font-weight: 300 !important;
     font-style: italic !important;
 
     text-align: left;
     min-height: 1.5em;
     padding-bottom: 15% !important;
+  }
+
+  &--alt {
+    .QuoteSlide-quote {
+      color: sc-color('grey-60') !important;
+    }
   }
 }

@@ -5,7 +5,7 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
     fingerprint: {
-      enabled: true,
+      // enabled: true,
       extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'woff', 'woff2', 'otf', 'eot', 'ttf', 'svg', 'swf', 'ico']
     },
   });
@@ -26,6 +26,11 @@ module.exports = function(defaults) {
   // if (app.env === 'development') {
   //   app.options.fingerprint.prepend = 'http://localhost:7149/';
   //   app.options.fingerprint.customHash = null;
+  // }
+
+  // if (app.env === 'github') {
+  //   app.options.fingerprint.enabled = true;
+  //   app.options.fingerprint.prepend = '/betterment-rebranding-bonanza';
   // }
 
   if (app.env === 'production') {

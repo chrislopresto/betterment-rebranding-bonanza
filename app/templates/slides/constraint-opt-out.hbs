@@ -1,0 +1,48 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super="Commit"
+    main="Reskin Mode"
+    sub=""
+  }}
+  {{#presentations/slide-body columns=2 class="u-flexJustifySpaceBetween"}}
+    {{#presentations/slide-column class="u-flex55"}}
+      <div class="u-smallHeader">Controller</div>
+
+      {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class SomeController &lt; ApplicationController
+    use_reskin_mode
+  end
+      {{/reveal-code}}
+      <br>
+      <div class="u-smallHeader">Application Controller</div>
+      {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class ApplicationController &lt; ActionController::Base
+    before_action :set_rebrand_variant
+
+    class_attribute :use_reskin_mode
+    def self.use_reskin_mode
+      self.use_reskin_mode = true
+    end
+
+    private
+
+    def set_rebrand_variant
+      request.variant = rebrand_variant if test_track_visitor.ab :rebrand_enabled
+    end
+
+    def rebrand_variant
+      self.use_reskin_mode ? :reskin : :rebrand
+    end
+  end
+      {{/reveal-code}}
+
+
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-flex40"}}
+      <div class="u-smallHeader">Reskin Mode</div>
+      <div class="lsgdd-TightContainer">
+        <img class="lsgdd-Image u-shadow" src="assets/images/example-opt-out.png" alt="Reskin Mode">
+      </div>
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+{{/reveal-slide}}

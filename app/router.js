@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('presentations', function() {
+    this.route('hot-swapping-our-rails-front-end-in-secret');
+  });
 });
 
 export default Router;

@@ -1,0 +1,45 @@
+{{#reveal-slide class="lsgdd-FreestyleSlide lsgdd-ObjectivesSlide"}}
+  {{presentations/slide-header
+    super="Spike"
+    main="Rebrand Variant"
+    sub=""
+  }}
+  {{#presentations/slide-body columns=1 class="u-flexJustifySpaceBetween"}}
+    {{#presentations/slide-column class="u-flex60"}}
+      {{#presentations/slide-list}}
+        {{#presentations/slide-list-item}}
+          Single rebrand conditional
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          No code changes to existing views
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          Separate rebranded versions of everything
+        {{/presentations/slide-list-item}}
+        {{#presentations/slide-list-item}}
+          Delete retired versions after launch
+        {{/presentations/slide-list-item}}
+      {{/presentations/slide-list}}
+      <br>
+      <div class="u-smallHeader">Application Controller</div>
+      {{#reveal-code language="ruby" codeTheme="tomorrow-night"}}
+  class ApplicationController &lt; ActionController::Base
+    before_action :set_rebrand_variant
+
+    private
+
+    def set_rebrand_variant
+      request.variant = :rebrand if test_track_visitor.ab :rebrand_enabled
+    end
+  end
+      {{/reveal-code}}
+    {{/presentations/slide-column}}
+    {{#presentations/slide-column class="u-flex40"}}
+    {{/presentations/slide-column}}
+  {{/presentations/slide-body}}
+  {{#presentations/slide-footer}}
+    <div class="lsgdd-TightContainer">
+      <img class="lsgdd-Image u-image--s u-rounded u-shadow" src="assets/images/action-pack.jpg" alt="Action Pack">
+    </div>
+  {{/presentations/slide-footer}}
+{{/reveal-slide}}

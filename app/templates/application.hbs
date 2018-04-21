@@ -8,19 +8,94 @@
     center=false
 }}
 
-{{#reveal-slide centeredVertically=true}}
-  {{#presentations/slide-body align="center" display="block"}}
-    <h1>Swapping Your Rails Front End</h1>
-    <h3>A Betterment Rebranding Bonanza</h3>
-    <p class="fragment">
-      <small><a href="http://chrislopresto.com">Chris LoPresto</a> / <a href="http://twitter.com/chrislopresto">@chrislopresto</a></small>
-    </p>
-  {{/presentations/slide-body}}
-  {{#reveal-slide-notes}}
-- Hello
-- Thanks
-- Happy
-  {{/reveal-slide-notes}}
-{{/reveal-slide}}
+  {{partial 'slides/title'}}
+  {{partial 'slides/intro'}}
+
+  {{partial 'slides/rebrand-timeline-1'}}
+  {{partial 'slides/rebrand-timeline-2'}}
+  {{partial 'slides/rebrand-timeline-before-after-homepage'}}
+  {{partial 'slides/rebrand-timeline-before-after-summary'}}
+  {{partial 'slides/rebrand-timeline-before-after-summary-2'}}
+  {{partial 'slides/rebrand-timeline-before-after-portfolio'}}
+  {{partial 'slides/rebrand-curveballs'}}
+  {{partial 'slides/rebrand-timeline-before-after-responsive'}}
+  {{partial 'slides/rebrand-already'}}
+  {{partial 'slides/rebrand-already-feature-flag'}}
+  {{partial 'slides/rebrand-already-feature-flag-2'}}
+  {{partial 'slides/rebrand-already-design-system'}}
+  {{partial 'slides/rebrand-already-design-system-2'}}
+  {{partial 'slides/takeaway-fortune' }}
+
+  {{partial 'slides/trailblaze-launch-intro'}}
+  {{partial 'slides/trailblaze-launch-idea'}}
+  {{partial 'slides/trailblaze-launch-two-manifests-2'}}
+  {{partial 'slides/trailblaze-launch-two-manifests'}}
+  {{partial 'slides/trailblaze-launch-two-manifests-2'}}
+  {{partial 'slides/trailblaze-launch-flag'}}
+  {{partial 'slides/trailblaze-launch-flag-2'}}
+  {{partial 'slides/trailblaze-launch-share'}}
+  {{partial 'slides/trailblaze-launch-share-2'}}
+  {{partial 'slides/trailblaze-launch-results'}}
+  {{partial 'slides/takeaway-trailblazing' }}
+
+  {{partial 'slides/dive-view-variant-intro'}}
+  {{partial 'slides/dive-view-variant-default'}}
+  {{partial 'slides/dive-view-variant-bot'}}
+  {{partial 'slides/dive-view-variant-code'}}
+  {{partial 'slides/takeaway-mistakes' }}
+
+  {{partial 'slides/audit' }}
+  {{!-- {{partial 'slides/long-list' }} --}}
+  {{partial 'slides/design-system-insufficient-why'}}
+
+  {{partial 'slides/css-contributions'}}
+  {{partial 'slides/css-woes'}}
+
+  {{partial 'slides/design-system-inspiration'}}
+  {{!-- {{partial 'slides/design-system-definition'}} --}}
+
+  {{partial 'slides/design-system-tenets'}}
+  {{partial 'slides/design-system-dive-intro'}}
+  {{partial 'slides/design-system-spacing'}}
+  {{partial 'slides/design-system-color'}}
+  {{partial 'slides/design-system-color-2'}}
+  {{partial 'slides/design-system-color-3'}}
+  {{partial 'slides/design-system-breakpoint'}}
+  {{partial 'slides/design-system-typography'}}
+  {{partial 'slides/design-system-vertical-rhythm'}}
+  {{partial 'slides/design-system-vertical-rhythm-2'}}
+  {{partial 'slides/design-system-grid'}}
+  {{partial 'slides/design-system-grid-2'}}
+  {{partial 'slides/design-system-icon'}}
+  {{partial 'slides/design-system-icon-2'}}
+  {{partial 'slides/design-system-icon-3'}}
+  {{partial 'slides/design-system-components'}}
+  {{partial 'slides/design-system-components-2'}}
+  {{partial 'slides/design-system-layout-components'}}
+  {{partial 'slides/design-system-layout-components-2'}}
+  {{partial 'slides/design-system-visualization'}}
+  {{reveal-slide data-background="/assets/images/spongebob-many-thumbs-up.gif"}}
+
+  {{partial 'slides/dive-view-variant-example-simple'}}
+  {{partial 'slides/dive-view-variant-example-complex'}}
+  {{partial 'slides/commit'}}
+
+  {{partial 'slides/constraint'}}
+  {{partial 'slides/constraint-opt-out'}}
+  {{partial 'slides/constraint-takeaway' }}
+
+  {{partial 'slides/story-pull-requests' }}
+  {{partial 'slides/story-specificity-style-closet' }}
+  {{partial 'slides/story-specificity-style-closet-2' }}
+  {{partial 'slides/story-specificity-retail' }}
+  {{partial 'slides/story-specificity-retail-2' }}
+  {{partial 'slides/story-css-loc' }}
+  {{partial 'slides/story-css-analysis' }}
+
+  {{partial 'slides/whats-next' }}
+  {{partial 'slides/quote-ship' }}
+  {{partial 'slides/takeaway-good-people' }}
+
+  {{partial 'slides/thanks' }}
 
 {{/reveal-presentation}}

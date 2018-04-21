@@ -1,23 +1,30 @@
 $bulletTextUnderlineColor: #888 !default;
 .SlideListItem {
-  padding-top: 2rem !important;
+  padding-bottom: 1.5rem !important;
   line-height: 1.3 !important;
+  font-size: 2.5rem !important;
+
+  &--withSubItems {
+    padding-bottom: 0 !important;
+  }
 
   &-content {
     position: relative !important;
-    padding-bottom: .8rem !important;
+    padding-bottom: .6rem !important;
     text-decoration: none !important;
     display: inline-block;
+    // font-weight: 300 !important;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 2px;
       left: 0;
-      height: 2px;
+      height: 1px;
       width: 100%;
       background: $bulletTextUnderlineColor;
-      background: linear-gradient(to left, transparent 0%, $bulletTextUnderlineColor 50%, transparent 100%) !important;
+      background: linear-gradient(to left, transparent 0, $bulletTextUnderlineColor 10%, $bulletTextUnderlineColor 50%, transparent 100%) !important;
+
     }
   }
 
@@ -30,9 +37,9 @@ $bulletTextUnderlineColor: #888 !default;
   }
 
   &--sub {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
     display: block !important;
-    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
 
     ul {
       list-style: none !important;
