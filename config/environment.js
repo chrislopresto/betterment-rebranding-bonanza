@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'betterment-rebranding-bonanza',
     environment: environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -40,6 +40,10 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+  }
+
+  if (environment === 'production') {
+    ENV.rootURL = 'https://betterment-rebranding-bonanza-assets.s3.amazonaws.com/';
   }
 
   return ENV;
